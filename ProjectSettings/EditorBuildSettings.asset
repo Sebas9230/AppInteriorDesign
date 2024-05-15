@@ -6,10 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/TITAMenus/MenuInicial.unity
+    path: Assets/Scenes/MenuInicial.unity
     guid: b0c2099afa15093448f2fb224db890aa
   - enabled: 1
-    path: Assets/Scenes/TITAMenus/MenuInicialDisenador.unity
+    path: Assets/Scenes/MenuInicialDisenador.unity
     guid: 3a92042cd275bef4a9c8346833488d02
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260, type: 2}
