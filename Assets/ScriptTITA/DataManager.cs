@@ -19,7 +19,7 @@ public class DataManager : MonoBehaviour
         {
             ItemButton itemButtonManager;
 
-            itemButtonManager = Instatiate(itemButton, buttonContainer.transform);
+            itemButtonManager = Instantiate(itemButton, buttonContainer.transform);
             itemButtonManager.ItemName = item.ItemName;
             itemButtonManager.ItemDescription = item.ItemDescription;
             itemButtonManager.ItemImage = item.ItemImage;
@@ -27,6 +27,6 @@ public class DataManager : MonoBehaviour
             itemButtonManager.name = item.ItemName;
         }
 
-        MenuManager.instance.onItemsMenu -= CreateButtons;
+        MenuManager.instance.OnItemsMenu -= CreateButtons;
     }
 }

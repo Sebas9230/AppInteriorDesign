@@ -8,17 +8,17 @@ public class ItemButton : MonoBehaviour
     private string itemDescription;
     private Sprite itemImage;
     private GameObject item3DModel;
-    public string ItemName(){
-        set{
+
+
+    public string ItemName{
+        set
+        {
             itemName = value;
         }
     }
-    private string itemDescription;
-    public int ItemDescription { set => itemDescription = value; }
-    private string itemImage;
-    public int ItemImage { set => itemImage = value; }
-    private string item3DModel;
-    public int Item3DModel { set => item3DModel = value; }
+    public string ItemDescription { set => itemDescription = value; }
+    public Sprite ItemImage { set => itemImage = value; }
+    public GameObject Item3DModel { set => item3DModel = value; }
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +26,7 @@ public class ItemButton : MonoBehaviour
         transform.GetChild(1).GetComponent<RawImage>().texture = itemImage.texture;
         transform.GetChild(2).GetComponent<Text>().text = itemDescription;
         var button = GetComponent<Button>();
-        button.onClick.AddListener(MenuManager.instance,ARPosition);
+        button.onClick.AddListener(MenuManager.instance.ARPosition);
         button.onClick.AddListener(Create3DModel);
     }
 
