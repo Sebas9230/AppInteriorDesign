@@ -10,16 +10,17 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject mainMenuItems;
     [SerializeField] private GameObject itemsMenuOpened;
     [SerializeField] private GameObject arPositionMenu;
-     [SerializeField] private Button BtnShowItems;
-     [SerializeField] private Button BtnItemsOpened;
-     [SerializeField] private Button BtnAprove;
-     [SerializeField] private Button BtnBack;
+    [SerializeField] private Button BtnShowItems;
+    [SerializeField] private Button BtnItemsOpened;
+    [SerializeField] private Button BtnAprove;
+    [SerializeField] private Button BtnBack;
     // Start is called before the first frame update
     void Start()
     {
         BtnShowItems.onClick.AddListener(OnBtnshowItemsClicked);
         BtnItemsOpened.onClick.AddListener(OnBtnItemsOpenedClicked);
-        BtnBack.onClick.AddListener(OnBtnshowItemsClicked);
+        BtnAprove.onClick.AddListener(OnBtnsARPositionClicked);
+        BtnBack.onClick.AddListener(OnBtnsARPositionClicked);
     }
 
     private void OnBtnshowItemsClicked()
@@ -32,7 +33,16 @@ public class UIManager : MonoBehaviour
         mainMenuItems.SetActive(true);
         itemsMenuOpened.SetActive(false);
     }
+    private void OnBtnsARPositionClicked()
+    {
+        itemsMenuOpened.SetActive(true);
+        arPositionMenu.SetActive(false);
+    }
 
+    public void GoToARPositionMenu(){
+        arPositionMenu.SetActive(true);
+        itemsMenuOpened.SetActive(false);
+    }
 
     // Start is called before the first frame update
     /* void Start()
