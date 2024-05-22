@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MySceneManager : MonoBehaviour
 {
@@ -39,5 +40,12 @@ public class MySceneManager : MonoBehaviour
     public void ChangeScene(int numEscena)
     {
         SceneManager.LoadScene(numEscena);
+    }
+
+    public void ShowProfile(GameObject profileCanvas){
+        profileCanvas.SetActive(true);
+    }
+    public void HideProfile(GameObject profileCanvas){
+        profileCanvas.SetActive(false);
     }
 }
