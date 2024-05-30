@@ -36,5 +36,8 @@ public class ItemButtonManager : MonoBehaviour
     private void Create3DModel()
     {
         Instantiate(item3DModel);
+        string uniqueID = UniqueIDGenerator.GenerateID(); //generar ID
+        //item3DModel.name = uniqueID; //asignar el ID al nombre del GameObject
+        Debug.Log("ID: "+uniqueID);
     }
 }

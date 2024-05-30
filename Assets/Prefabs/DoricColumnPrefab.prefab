@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4735005190226596969}
   - component: {fileID: 7047901264673188877}
   - component: {fileID: 1816012430992050866}
+  - component: {fileID: 5473702665209849537}
   m_Layer: 0
   m_Name: DoricColumnPrefab
   m_TagString: Untagged
@@ -83,6 +84,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &5473702665209849537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4725219461887091893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dc1f22cc38f7034ebde8f97eb36c158, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  modelPrefab: {fileID: 4725219461887091893}
+  id: 
 --- !u!1 &8616520476732440165
 GameObject:
   m_ObjectHideFlags: 0

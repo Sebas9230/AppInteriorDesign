@@ -1,3 +1,6 @@
+/*************************************************************************** 
+*   Singleton for Navegation in the escene and menus 
+****************************************************************************/
 using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -9,8 +12,8 @@ public class MySceneManager : MonoBehaviour
     public event Action OnItemsMenu;
     public event Action OnARPosition;
 
-//Singletón - instanciado una vez,  globalmente accesible 
-    public static MySceneManager instance;
+    public static MySceneManager instance;//Singletón - instanciado una vez,  globalmente accesible 
+    
     private void Awake(){
         if (instance!=null && instance!=this){
             Destroy(gameObject);
@@ -37,11 +40,13 @@ public class MySceneManager : MonoBehaviour
         Debug.Log("Posición AR Activado");
     }        
 
+    //Change Scene
     public void ChangeScene(int numEscena)
     {
         SceneManager.LoadScene(numEscena);
     }
 
+    //Show Profile Canvas
     public void ShowProfile(GameObject profileCanvas){
         profileCanvas.SetActive(true);
     }

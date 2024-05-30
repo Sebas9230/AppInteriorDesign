@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - ProfileCanvas
+  - 3DModel
   layers:
   - Default
   - TransparentFX
