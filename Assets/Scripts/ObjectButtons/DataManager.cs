@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -26,6 +27,7 @@ public class DataManager : MonoBehaviour
             itemButton.ItemImage = item.ItemImage;
             itemButton.Item3DModel = item.Item3DModel;
             itemButton.name = item.ItemName; //nombre del botón
+            //Debug.Log(itemButton.name);
         }
         //para generarlos solo una vez y no cada vez que se genere el evento
         MySceneManager.instance.OnItemsMenu -= CreateButtons;

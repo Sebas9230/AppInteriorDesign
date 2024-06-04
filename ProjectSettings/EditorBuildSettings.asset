@@ -14,9 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/Scenes/WorkspaceDise\xF1ador.unity"
     guid: b4a8986dcd90e7a4098068bd41ce0e28
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/testScannerScene.unity
+    guid: a291c2a44a14f324ebb0c66ecb9f3cae
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: f6943d121918db6449d872b1488cb095, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: ceb8558abc4d01c4cabf4b68bb8ef680, type: 2}
