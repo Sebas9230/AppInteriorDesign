@@ -2229,7 +2229,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1356399841
 Transform:
   m_ObjectHideFlags: 0
@@ -3683,7 +3683,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1962716335}
-  - component: {fileID: 1962716334}
+  - component: {fileID: 1962716336}
   m_Layer: 0
   m_Name: DataButtonsManager
   m_TagString: Untagged
@@ -3691,25 +3691,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1962716334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1962716333}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3ca0b1f8ed53f1419b226d8655c4e8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  items:
-  - {fileID: 11400000, guid: 55c4fd71228571f49be834adb0b9b737, type: 2}
-  - {fileID: 11400000, guid: a5341a26f6d6b0f40bf16f5ef45482bf, type: 2}
-  - {fileID: 11400000, guid: 00c1fd2ba6e1a7d418f4572493c01bed, type: 2}
-  - {fileID: 11400000, guid: 27c5cd2b440d60c45aff5ef9d1c38446, type: 2}
-  buttonContainer: {fileID: 1376530509}
-  itemButtonManager: {fileID: -2147679982069048559, guid: 2edbe1b854eae3c45bf6a8565f99924c, type: 3}
 --- !u!4 &1962716335
 Transform:
   m_ObjectHideFlags: 0
@@ -3725,6 +3706,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1323264849}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1962716336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1962716333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d7f11d496ae4c94fab4b9090514146e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jsonURL: https://firebasestorage.googleapis.com/v0/b/vertexscape.appspot.com/o/NewItemsCollection.json?alt=media&token=ab7ced1c-5e23-4e37-bcf8-42e270f84116
+  itemButtonManager: {fileID: -2147679982069048559, guid: 2edbe1b854eae3c45bf6a8565f99924c, type: 3}
+  buttonsContainer: {fileID: 1376530509}
+  newItemsCollection:
+    items: []
 --- !u!1 &1979732858
 GameObject:
   m_ObjectHideFlags: 0
