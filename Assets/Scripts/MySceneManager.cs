@@ -4,7 +4,6 @@
 using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class MySceneManager : MonoBehaviour
 {
@@ -52,5 +51,12 @@ public class MySceneManager : MonoBehaviour
     }
     public void HideProfile(GameObject profileCanvas){
         profileCanvas.SetActive(false);
+    }
+    //Show New Project Canvas
+    public void ShowOptions(GameObject newProjectCanvas){
+        newProjectCanvas.SetActive(true);
+    }
+    public void HideOptions(GameObject newProjectCanvas){
+        newProjectCanvas.SetActive(false);
     }
 }
