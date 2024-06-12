@@ -11,9 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/Scenes/MenuDise\xF1ador.unity"
     guid: 1e6bec6b35dba9c45869c4e6bcda80ed
-  - enabled: 0
-    path: Assets/Scenes/DefaultScene1.0.unity
-    guid: b4a8986dcd90e7a4098068bd41ce0e28
   - enabled: 1
     path: Assets/Scenes/DefaultScene.unity
     guid: ba3d5a9dece839e4eb62612dbedd54e6

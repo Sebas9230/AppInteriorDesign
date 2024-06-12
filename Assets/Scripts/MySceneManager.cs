@@ -45,18 +45,11 @@ public class MySceneManager : MonoBehaviour
         SceneManager.LoadScene(numEscena);
     }
 
-    //Show Profile Canvas
-    public void ShowProfile(GameObject profileCanvas){
-        profileCanvas.SetActive(true);
+    //Show Canvas
+    public void ShowCanvas(GameObject canvas){
+        canvas.SetActive(true);
     }
-    public void HideProfile(GameObject profileCanvas){
-        profileCanvas.SetActive(false);
-    }
-    //Show New Project Canvas
-    public void ShowOptions(GameObject newProjectCanvas){
-        newProjectCanvas.SetActive(true);
-    }
-    public void HideOptions(GameObject newProjectCanvas){
-        newProjectCanvas.SetActive(false);
+    public void HideCanvas(GameObject canvas){
+        canvas.SetActive(false);
     }
 }

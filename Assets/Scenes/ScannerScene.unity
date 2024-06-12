@@ -3264,7 +3264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d7f11d496ae4c94fab4b9090514146e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jsonURL: https://firebasestorage.googleapis.com/v0/b/vertexscape.appspot.com/o/NewItemsCollection.json?alt=media&token=cdf5ff37-0932-4f28-befc-e3a44b2333c8
+  jsonURL: https://firebasestorage.googleapis.com/v0/b/vertexscape.appspot.com/o/NewItemsCollection.json?alt=media&token=b20e9159-51e2-4762-8fee-0b9e4d70ba1e
   itemButtonManager: {fileID: -2147679982069048559, guid: 2edbe1b854eae3c45bf6a8565f99924c, type: 3}
   buttonsContainer: {fileID: 672242172}
   newItemsCollection:
