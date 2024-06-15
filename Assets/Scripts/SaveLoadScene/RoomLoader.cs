@@ -24,8 +24,8 @@ public class RoomLoader : MonoBehaviour
             return;
         }
 
-        StartCoroutine(LoadJsonFromUrl(url)); //para render
-        //StartCoroutine(LoadJsonFromUrl("http://127.0.0.1:8000/media/projects/roomTest_xk8OQiZ.json"));//probar localmente
+        //StartCoroutine(LoadJsonFromUrl(url)); //para render
+        StartCoroutine(LoadJsonFromUrl("http://127.0.0.1:8000/media/projects/roomTest_TRCPc4L.json"));//probar localmente
 
     }
 

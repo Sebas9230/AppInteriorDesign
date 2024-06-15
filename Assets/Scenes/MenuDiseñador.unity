@@ -1715,7 +1715,7 @@ GameObject:
   - component: {fileID: 539991914}
   - component: {fileID: 539991915}
   m_Layer: 0
-  m_Name: ProjectsController
+  m_Name: ShowProjectsController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
