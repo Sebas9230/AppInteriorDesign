@@ -12741,6 +12741,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneManager: {fileID: 1112249366}
+  saverManager: {fileID: 0}
 --- !u!4 &2096254614
 Transform:
   m_ObjectHideFlags: 0

@@ -49,8 +49,6 @@ public class ItemButtonManager : MonoBehaviour
     private void Create3DModel()
     {
         //Instantiate(item3DModel);//creación Modelo 3D
-        //string uniqueID = UniqueIDGenerator.GenerateID(); //generar ID
-        //Debug.Log("ID: "+uniqueID);
         StartCoroutine(DownloadAssetBundle(urlBundleModel));
     }
 

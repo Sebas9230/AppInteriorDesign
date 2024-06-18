@@ -493,7 +493,6 @@ GameObject:
   m_Component:
   - component: {fileID: 126594026}
   - component: {fileID: 126594028}
-  - component: {fileID: 126594027}
   m_Layer: 0
   m_Name: SaveDataManager
   m_TagString: Untagged
@@ -516,19 +515,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1670374084}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &126594027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 126594025}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6828dcca1327f345b09efc0e90d00ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mruk: {fileID: 0}
 --- !u!114 &126594028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -541,6 +527,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d190add4ac582914b90f9f8608d298f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mruk: {fileID: 105756865}
+  apiManager: {fileID: 1288248243}
 --- !u!1 &167943249
 GameObject:
   m_ObjectHideFlags: 0
@@ -1769,11 +1757,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d7f11d496ae4c94fab4b9090514146e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jsonURL: https://firebasestorage.googleapis.com/v0/b/vertexscape.appspot.com/o/NewItemsCollection.json?alt=media&token=b20e9159-51e2-4762-8fee-0b9e4d70ba1e
+  jsonURL: https://projectvertexscape.onrender.com/api/categorias-objetos/
   itemButtonManager: {fileID: -2147679982069048559, guid: 2edbe1b854eae3c45bf6a8565f99924c, type: 3}
   buttonsContainer: {fileID: 61030008}
-  newItemsCollection:
-    items: []
+  categoriasCollection: []
 --- !u!1 &761048673
 GameObject:
   m_ObjectHideFlags: 0
@@ -2229,13 +2216,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1033601262}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalRotation: {x: 0.41150868, y: -0.26248714, z: 0.09625763, w: 0.8674651}
+  m_LocalPosition: {x: 0.02, y: 2.97, z: -0.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 49.86, y: -35.699, z: -4.362}
 --- !u!1 &1058434405
 GameObject:
   m_ObjectHideFlags: 0
@@ -2491,7 +2478,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 126594027}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: RoomSaver, Assembly-CSharp
         m_MethodName: SaveCurrentSceneToJson
         m_Mode: 5
@@ -2637,6 +2624,52 @@ MonoBehaviour:
   _selectSurface: {fileID: 525324649}
   _movementProvider: {fileID: 0}
   _tiebreakerScore: 0
+--- !u!1 &1288248241
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1288248242}
+  - component: {fileID: 1288248243}
+  m_Layer: 0
+  m_Name: ApiManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1288248242
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288248241}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1670374084}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1288248243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288248241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe21a49f232597747a02e483109f5bd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneManager: {fileID: 1888946975}
+  saverManager: {fileID: 126594028}
 --- !u!1 &1319778477
 GameObject:
   m_ObjectHideFlags: 0
@@ -3269,6 +3302,7 @@ Transform:
   - {fileID: 1888946974}
   - {fileID: 711337908}
   - {fileID: 126594026}
+  - {fileID: 1288248242}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1680027050

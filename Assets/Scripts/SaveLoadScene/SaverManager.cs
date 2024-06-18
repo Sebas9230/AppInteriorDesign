@@ -1,20 +1,22 @@
 using System.Collections.Generic;
-using System.IO;
 using UnityEngine;
+using Meta.XR.MRUtilityKit;
 
 public class SaverManager : MonoBehaviour
 {
     // Lista para almacenar los objetos instanciados
     private List<GameObject> instantiatedObjects = new List<GameObject>();
+    public MRUK mruk;
+    public ApiManager apiManager;
 
     public void RegisterInstantiatedObject(GameObject obj)
     {
         instantiatedObjects.Add(obj);
     }
 
-    public List<ObjectData> GatherSceneData()
+    public List<ObjectData> GatherObjectsData()
     {
-        List<ObjectData> sceneData = new List<ObjectData>();
+        List<ObjectData> objectsData = new List<ObjectData>();
 
         foreach (GameObject obj in instantiatedObjects)
         {
@@ -24,10 +26,10 @@ public class SaverManager : MonoBehaviour
                 obj.transform.rotation,
                 obj.transform.localScale
             );
-            sceneData.Add(data);
+            objectsData.Add(data);
         }
 
-        return sceneData;
+        return objectsData;
     }
 
     public string ConvertToJson(List<ObjectData> dataList)
@@ -35,66 +37,30 @@ public class SaverManager : MonoBehaviour
         return JsonUtility.ToJson(new SerializationHelper<ObjectData>(dataList));
     }
 
-    public void SaveJsonToFile(string json, string filePath)
-    {
-        File.WriteAllText(filePath, json);
-    }
-
-    public void SaveScene(string filePath)
-    {
-        List<ObjectData> sceneData = GatherSceneData();
-        string json = ConvertToJson(sceneData);
-        SaveJsonToFile(json, filePath);
-    }
-
+    //Guarda datos en la db
     public void OnSaveButtonClick()
     {
-        string filePath = Application.persistentDataPath + "/objectsData.json";
-        Debug.Log(filePath);
-        SaveScene(filePath);
+        List<ObjectData> objectsData = GatherObjectsData();
+        string json = ConvertToJson(objectsData);
+        ProjectData.CurrentObjetoJson = json;
+
+        SaveCurrentSceneToJson();
+        
+        // Llamar al POST de los datos de unityproyect
+        apiManager.StartCoroutine(apiManager.PostSceneData());
+
+        StartCoroutine(apiManager.GetDataFromApi(ProjectData.Token));
     }
 
-/*  Load the scene */
-    /* public void OnLoadButtonClick()
+    //RoomSaver - guarda la habitación en formato json en la variable estática
+    public void SaveCurrentSceneToJson()
     {
-        string filePath = Application.persistentDataPath + "/objectsData.json";
-        LoadObjectsFromFile(filePath);
-    } */
+        if (mruk == null)
+        {
+            Debug.LogError("MRUK script reference is missing.");
+            return;
+        }
 
-    public void LoadObjectsFromFile(string filePath)
-    {
-        if (File.Exists(filePath))
-        {
-            string json = File.ReadAllText(filePath);
-            SerializationHelper<ObjectData> helper = JsonUtility.FromJson<SerializationHelper<ObjectData>>(json);
-            List<ObjectData> objectsData = helper.data;
-
-            foreach (ObjectData data in objectsData)
-            {
-                // Assuming you have a method to instantiate objects based on their type
-                GameObject obj = InstantiateObjectFromData(data);
-                instantiatedObjects.Add(obj);
-            }
-        }
-        else
-        {
-            Debug.LogError("File not found: " + filePath);
-        }
-    }
-
-    private GameObject InstantiateObjectFromData(ObjectData data)
-    {
-        GameObject objPrefabname = Resources.Load<GameObject>(data.prefabName);
-        if (objPrefabname != null)
-        {
-            GameObject obj = Instantiate(objPrefabname, data.position, data.rotation);
-            obj.transform.localScale = data.scale;
-            return obj;
-        }
-        else
-        {
-            Debug.LogError("Prefab not found for type: " + data.prefabName);
-            return null;
-        }
+        ProjectData.CurrentHabitacionJson = mruk.SaveSceneToJsonString(SerializationHelpers.CoordinateSystem.Unity);
     }
 }

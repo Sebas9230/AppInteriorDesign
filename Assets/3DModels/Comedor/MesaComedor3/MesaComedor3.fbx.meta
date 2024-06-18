@@ -3,7 +3,527 @@ guid: a1aa423248fc6ea47a808eb9270dfe3e
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BORRACHA
+    second: {fileID: 2100000, guid: 4feda8a99c4f3de488a989dd5164a5da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CADEIRA
+    second: {fileID: 2100000, guid: 72ec1771f23cd0a4a8811b06ccb03818, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA
+    second: {fileID: 2100000, guid: e680f119527875b49a1f205b3596078f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA1
+    second: {fileID: 2100000, guid: 06684d87d9fa6744184a7475b5f938db, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA10
+    second: {fileID: 2100000, guid: 212a1dcffed253d45b951fe01a168b72, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA11
+    second: {fileID: 2100000, guid: ea99b197a3121504d864f14a8f49e5ae, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA12
+    second: {fileID: 2100000, guid: faa0cb973703a964d8e4caca476c9f70, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA13
+    second: {fileID: 2100000, guid: 597804bb18c4e1445a58926a40464b0f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA14
+    second: {fileID: 2100000, guid: 4a63bfb9b97301744bdb8708d6b082de, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA15
+    second: {fileID: 2100000, guid: 6bc3f670bb6fc674da2810530bc11487, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA16
+    second: {fileID: 2100000, guid: c85dcdc32cf8add44828f83a46e15d4b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA17
+    second: {fileID: 2100000, guid: c1ca496fd11b49443af04a2ba6bd9e32, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA18
+    second: {fileID: 2100000, guid: 05d9051768a55df408d42b101b44f9bd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA19
+    second: {fileID: 2100000, guid: 112b2eac01ad16b41908bfdab9d93c7f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA2
+    second: {fileID: 2100000, guid: 26781f549bf0cb54787e8bb055aec4c0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA20
+    second: {fileID: 2100000, guid: 181124a1fc6b04241ba332edff277660, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA21
+    second: {fileID: 2100000, guid: 3310a3d9964dbf647bf6b8eb06764d50, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA22
+    second: {fileID: 2100000, guid: f75e91a22f49b0d4f82779b5a4a285d8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA23
+    second: {fileID: 2100000, guid: 42e1bec3b48d61546b7b2344a367c31d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA24
+    second: {fileID: 2100000, guid: f08a032b262b6a24eacb6e5659744528, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA25
+    second: {fileID: 2100000, guid: e8da6b1dc78f8fc4bbe577bb350b1a64, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA26
+    second: {fileID: 2100000, guid: 322ce7b5ffc7c2445bde92fecfd365d9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA27
+    second: {fileID: 2100000, guid: 489c7e245c406fe41822abd7eeb22f24, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA28
+    second: {fileID: 2100000, guid: a53af8b24f3dd6d41baef5bf7eb0f64c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA29
+    second: {fileID: 2100000, guid: 2089744b1e58c7247ba19147a35104d5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA3
+    second: {fileID: 2100000, guid: 3bcd5657722626740bf426d4f3ddb088, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA30
+    second: {fileID: 2100000, guid: bbe94d0efc9e4034eb40388e1ae190e5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA31
+    second: {fileID: 2100000, guid: f2bf3204205c1174da3946fa89977e70, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA32
+    second: {fileID: 2100000, guid: 028022c591f397743a69f5c758e771fa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA33
+    second: {fileID: 2100000, guid: 5ad6b8e667ee6f649a9f98819fd6a3b3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA34
+    second: {fileID: 2100000, guid: b9ed429b159e1ca4c9abf4b131b22127, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA35
+    second: {fileID: 2100000, guid: 5a3df11ae39d80d4fb72bc65a1d4062f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA36
+    second: {fileID: 2100000, guid: 26dd3b7b486c1624fb0679de12a8c046, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA37
+    second: {fileID: 2100000, guid: 1d750e9ae6139354fa4e19cae84dd06f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA38
+    second: {fileID: 2100000, guid: 19b48fed76bccd94dbeaba2a432b0d40, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA39
+    second: {fileID: 2100000, guid: ce4d6be9c6c68ba43b8b0c9d0879b803, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA4
+    second: {fileID: 2100000, guid: 44ca94d495fb64541914a40a12490b52, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA40
+    second: {fileID: 2100000, guid: 658f19111cbff9d469d1611a116d9bbc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA41
+    second: {fileID: 2100000, guid: b3d0c0242184a244c80926a1ea187172, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA42
+    second: {fileID: 2100000, guid: 20c5b44ce4f0aa544869ae3798c7811d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA43
+    second: {fileID: 2100000, guid: b104887d4018f904785a47aa80c77cfa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA44
+    second: {fileID: 2100000, guid: 95bc825a55201bb41a1c0a2ab770e12c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA45
+    second: {fileID: 2100000, guid: 9760a70e052ba6c4fbc9be4121421fad, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA46
+    second: {fileID: 2100000, guid: fb276d4c57024f840b4ba84a91eb78d8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA47
+    second: {fileID: 2100000, guid: 473d5e6c286097a4290fb0ae7ded3426, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA48
+    second: {fileID: 2100000, guid: 405030d666dfc8546a4ebe41345326f5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA49
+    second: {fileID: 2100000, guid: cbd2b621652a83d459306a9874d89222, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA5
+    second: {fileID: 2100000, guid: 8011ddc355c1a844a913d34a255d6604, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA50
+    second: {fileID: 2100000, guid: 453967045ab353c4384659e9dd2cf5ea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA51
+    second: {fileID: 2100000, guid: 8952ca82dc59296488e0a2f8939c7f67, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA52
+    second: {fileID: 2100000, guid: a496aeb42ce11604380947100f18a3f5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA53
+    second: {fileID: 2100000, guid: 70ef894f378216d41872e906634362b0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA54
+    second: {fileID: 2100000, guid: 9dc6e1891cacf394aa261b37f0244bed, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA55
+    second: {fileID: 2100000, guid: 34af851cd3061e34699593452f55df51, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA56
+    second: {fileID: 2100000, guid: 9b079ad351472614a91f4419a7f06079, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA57
+    second: {fileID: 2100000, guid: 44401b60c6c0ab6428a5a51648ffa43f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA58
+    second: {fileID: 2100000, guid: cf2a41cc3f2d6514ca5e93bce1ff6c96, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA59
+    second: {fileID: 2100000, guid: 624c1c3e48c061b49846762dd9dad5ca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA6
+    second: {fileID: 2100000, guid: 98b2f518d1ebd9541a6eb9910ad3982d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA60
+    second: {fileID: 2100000, guid: a128a191c8592ea4b914a755282a0376, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA61
+    second: {fileID: 2100000, guid: 3a01f3f4e7a7a614bbe05d4bb445da2b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA62
+    second: {fileID: 2100000, guid: 670bf9b0e64e4e7449e1ce6c95f316e3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA63
+    second: {fileID: 2100000, guid: 8fc8fa214facf5e4298c284db2428e2d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA64
+    second: {fileID: 2100000, guid: fceee1235a9c36d4198ec65ae8ae8695, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA65
+    second: {fileID: 2100000, guid: d82946bc266f9ec4ea1b8794c81a3209, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA66
+    second: {fileID: 2100000, guid: b84161a3731501545b47106a7beb8c68, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA67
+    second: {fileID: 2100000, guid: 964a2aa10bbbb0943a4aaad744228532, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA68
+    second: {fileID: 2100000, guid: e0f5bf1fc9495bf40a0bb7dd4a7a0fbc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA69
+    second: {fileID: 2100000, guid: d1cc66b4025309f41b763bdf94970c57, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA7
+    second: {fileID: 2100000, guid: e3b3ec24c391ab64e816ae6f5dd4c88e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA70
+    second: {fileID: 2100000, guid: 3f0f42a42ac372e4487dba05a26ab358, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA71
+    second: {fileID: 2100000, guid: 3940234834b03244fa6cb45dc0c760b7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA72
+    second: {fileID: 2100000, guid: b4cfff15066860e4d8ceedf59e9143e8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA73
+    second: {fileID: 2100000, guid: 35defa47389830d4aae5c4bed74acea8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA74
+    second: {fileID: 2100000, guid: 78b746ec194819e48be7591874fae8c4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA75
+    second: {fileID: 2100000, guid: 8f75be2133a516f4d9268077f0846c63, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA76
+    second: {fileID: 2100000, guid: 75f9e36adcb583d45b7e1eb0a7a29815, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA77
+    second: {fileID: 2100000, guid: 2303040f0521b894b866950d613927fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA78
+    second: {fileID: 2100000, guid: b037a43db81233e418573b5afe10fe02, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA79
+    second: {fileID: 2100000, guid: 55980c5b008083342bf58511dccc120a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA8
+    second: {fileID: 2100000, guid: 41bf751477f0781439cc0618a139c4f4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA80
+    second: {fileID: 2100000, guid: 87924544b1b0bdf4da5c910403d9566a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA81
+    second: {fileID: 2100000, guid: e002ed0a25421124d92bdafc5ec97e19, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA82
+    second: {fileID: 2100000, guid: ae53736a615597d4a8b26c71c3d6da9c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA83
+    second: {fileID: 2100000, guid: 83bba37389e2c6340974208ce784a56a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA84
+    second: {fileID: 2100000, guid: d040106869b86d24797af8b9ac8781f7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA85
+    second: {fileID: 2100000, guid: a2dc9678b1ca5a4488c3c257f11b7a59, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA86
+    second: {fileID: 2100000, guid: 2ca068a0e02c5cd4d94407b15725bfac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA87
+    second: {fileID: 2100000, guid: 187b9d3f278e6bb4798b88d677fdcf42, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA88
+    second: {fileID: 2100000, guid: 02f4c7af9ee0fcf4e8a3bb9b09521686, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA89
+    second: {fileID: 2100000, guid: eaab1af1bc0ebc94fbbd153a0bf1cc37, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA9
+    second: {fileID: 2100000, guid: 177bae082c36fb2468de8c414b9554d3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA90
+    second: {fileID: 2100000, guid: d574e766be18abe43ad01baf152798d3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA91
+    second: {fileID: 2100000, guid: 937c622d63da17e4e904294c9bbb5daa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA92
+    second: {fileID: 2100000, guid: 52826967a9fea664cab9c0a27fd15acd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA93
+    second: {fileID: 2100000, guid: 2be2cb05005dd8c4cb491fe2b4c8045e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA94
+    second: {fileID: 2100000, guid: eeb52a1f3a0ece14591816539272e73f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA95
+    second: {fileID: 2100000, guid: 4b9289abca87ce7428ad731f98b34bb8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA96
+    second: {fileID: 2100000, guid: 8ec2438a558270248bcb13949458cd89, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA97
+    second: {fileID: 2100000, guid: bdbec60eeac61584d9be2fb8a85293bc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA98
+    second: {fileID: 2100000, guid: 24e7fcd28d6dcbe4e8fc770940d80306, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MADEIRA99
+    second: {fileID: 2100000, guid: f395a3b73d727af47b2bbdd823498d75, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: VIDRIO
+    second: {fileID: 2100000, guid: 76d1ad7db3de66043862090ccb2497ee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _Metal_Corrogated_Shiny_5
+    second: {fileID: 2100000, guid: 2c2f8831e914dd045b4f58c62962103d, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -35,7 +555,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 2.88
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -90,7 +610,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 0.028800001
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

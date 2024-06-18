@@ -5,16 +5,17 @@ using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
+using WebSocketSharp;
 
 public class ProjectsController : MonoBehaviour
 {
     public TMP_Text usuarioIngresadoTxt;
     public GameObject projectNamePrefab;
     public Transform projectsContainer;
-
-    public SaverManager saverManager;
     public  int numScene = 4;
     public RoomLoader roomLoader;
+    public MySceneManager mySceneManager;
+    public GameObject newProjectCanva;
 
     void Start()
     {
@@ -50,27 +51,36 @@ public class ProjectsController : MonoBehaviour
     //EditButtonHandler
     private void OnEditProject(Project project)
     {
+        //guardar datos actuales estáticamente para el cambio de escena
+        ProjectData.Id = project.Id;
+        ProjectData.CurrentHabitacionJson = project.UnityProyect.Habitacion;
+        ProjectData.CurrentObjetoJson = project.UnityProyect.Objeto;
+
+        if (!string.IsNullOrEmpty(ProjectData.CurrentHabitacionJson))
+        {
+            //if not empty then: jsonScene
+            SceneManager.sceneLoaded += OnSceneLoaded;
+            SceneManager.LoadScene(numScene);
+        }
+        else
+        {
+            Debug.Log("*** Cargando Canva...");
+            //else thne: show options (DefaultScene or ScannerScene)
+            mySceneManager.ShowCanvas(newProjectCanva);
+
+        }
+
         Debug.Log("Editar proyecto: " + project.Nombre);
-
-        //definir url(habitación .json file) del proyecto actual en RoomLoader
-        ProjectData.CurrentProjectJsonUrl = project.UnityProjectJsonUrl;
-
-        SceneManager.sceneLoaded += OnSceneLoaded;
-        SceneManager.LoadScene(numScene);
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
 
-        //obtener los json (local)
-        string filePath = Application.persistentDataPath + "/objectsData.json";
-        saverManager.LoadObjectsFromFile(filePath);
-
-        //obtener los json (habitación desde la api)
-        RoomLoader roomLoader = FindObjectOfType<RoomLoader>();
+        // Verifica si RoomLoader está disponible antes de llamar a sus métodos
         if (roomLoader != null)
         {
+            roomLoader.LoadObjectsFromJsonData();
             roomLoader.LoadJsonScene();
         }
         else

@@ -2,31 +2,41 @@ using System.Collections;
 using UnityEngine;
 using System;
 using UnityEngine.Networking;
+using System.Collections.Generic;
 
 public class ObjectServerManager : MonoBehaviour
 {
-    [SerializeField] private string jsonURL;
+    [SerializeField] private string jsonURL = "https://projectvertexscape.onrender.com/api/categorias-objetos/";
     [SerializeField] private ItemButtonManager itemButtonManager;
     [SerializeField] private  GameObject buttonsContainer;
 
     private SaverManager sceneSaver;
 
     [Serializable]
-    public struct Items
+    public struct Categoria
     {
-        [Serializable]
-        public struct Item
-        {
-            public string Name;
-            public string Description;
-            public string Category;
-            public string URLBundleModel;
-            public string URLImageModel;
-        }
-        public Item[] items;
+        public string categoria;
+        public string url;
+        public Object[] Objetos;
     }
 
-    public Items newItemsCollection = new Items();
+    [Serializable]
+    public struct Object
+    {
+        public string nombre;
+        public string objeto3d;
+        public string img;
+    }
+
+    // Clase contenedora para envolver la lista
+    [Serializable]
+    public struct CategoriasWrapper
+    {
+        public List<Categoria> categorias;
+    }
+
+    public List<Categoria> categoriasCollection = new List<Categoria>();
+
 
     void Start()
     {
@@ -43,19 +53,28 @@ public class ObjectServerManager : MonoBehaviour
 
     private void CreateButtons()
     {
-        foreach (var item in newItemsCollection.items)
+        if (categoriasCollection == null || categoriasCollection.Count == 0)
         {
-            ItemButtonManager itemButton;
-            itemButton = Instantiate(itemButtonManager, buttonsContainer.transform);
-            itemButton.name = item.Name;
-            itemButton.ItemName = item.Name;
-            itemButton.ItemDescription = item.Description;
-            itemButton.URLBundleModel = item.URLBundleModel;
-            StartCoroutine(GetBundleImage(item.URLImageModel, itemButton));
-            itemButton.sceneSaver = sceneSaver;
-            
+            Debug.LogError("Categorias collection is null or empty!");
+            return;
         }
-        //desuscribo, para que los botones se creen solo una vez
+
+        Debug.Log("Creating buttons...");
+        foreach (var categoria in categoriasCollection)
+        {
+            foreach (var objeto in categoria.Objetos)
+            {
+                ItemButtonManager itemButton = Instantiate(itemButtonManager, buttonsContainer.transform);
+                itemButton.name = objeto.nombre;
+                itemButton.ItemName = objeto.nombre;
+                itemButton.ItemDescription = categoria.categoria; // Usamos la categoría como descripción
+                itemButton.URLBundleModel = objeto.objeto3d;
+                StartCoroutine(GetBundleImage(objeto.img, itemButton));
+                itemButton.sceneSaver = sceneSaver;
+
+                Debug.Log($"Button created for object: {objeto.nombre}");
+            }
+        }
         MySceneManager.instance.OnItemsMenu -= CreateButtons;
     }
 
@@ -63,10 +82,25 @@ public class ObjectServerManager : MonoBehaviour
     {
         UnityWebRequest serverRequest = UnityWebRequest.Get(jsonURL);
         yield return serverRequest.SendWebRequest();
-        if(serverRequest.result == UnityWebRequest.Result.Success)
+        if (serverRequest.result == UnityWebRequest.Result.Success)
         {
-            newItemsCollection = JsonUtility.FromJson<Items>(serverRequest.downloadHandler.text);
-        }else
+            string jsonResponse = serverRequest.downloadHandler.text;
+            Debug.Log("Received JSON: " + jsonResponse);
+
+            try
+                {
+                    // Envolver el JSON en un objeto que tenga una propiedad 'categorias'
+                    string wrappedJson = "{\"categorias\":" + jsonResponse + "}";
+                    CategoriasWrapper categoriasWrapper = JsonUtility.FromJson<CategoriasWrapper>(wrappedJson);
+                    categoriasCollection = categoriasWrapper.categorias;
+                    Debug.Log($"Number of categories: {categoriasCollection.Count}");
+                }
+                catch (Exception ex)
+                {
+                    Debug.LogError("Error deserializing JSON: " + ex.Message);
+                }
+        }
+        else
         {
             Debug.Log("Error while obtaining data from json in server");
         }

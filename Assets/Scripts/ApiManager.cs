@@ -3,13 +3,17 @@ using UnityEngine.Networking;
 using System.Collections;
 using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
 
 public class ApiManager : MonoBehaviour
 {
     private string authUrl = "https://projectvertexscape.onrender.com/api/login/";
     private string projectsUrl = "https://projectvertexscape.onrender.com/api/proyectos/";
 
+    private string unityproyectUrl = "https://projectvertexscape.onrender.com/api/unity-proyecto/";
+
     public MySceneManager sceneManager;
+    public SaverManager saverManager;
     //POST credentials
     public IEnumerator AuthenticateAndGetData(string email, string password)
     {
@@ -40,8 +44,9 @@ public class ApiManager : MonoBehaviour
                 string jsonResponse = request.downloadHandler.text;
                 JObject responseJson = JObject.Parse(jsonResponse);
                 string accessToken = responseJson.Value<string>("token");
+                ProjectData.Token = accessToken;
 
-                //consumir api y guardar datos estáticamente en ProjectData
+                //consumir api y guardar datos estáticamente en Projects de ProjectData
                 yield return StartCoroutine(GetDataFromApi(accessToken));
                 if (ProjectData.Projects != null && ProjectData.Projects.Count >= 0)
                 {
@@ -91,7 +96,12 @@ public class ApiManager : MonoBehaviour
                         Id = project.Value<int>("id"),
                         Nombre = project.Value<string>("nombre"),
                         NotasPersonales = project.Value<string>("notas_personales"),
-                        UnityProjectJsonUrl = project.Value<string>("unityproyect")
+                        UnityProyect = new UnityProject
+                        {
+                            Id = project["unityproyect"]?.Value<int?>("id"),
+                            Objeto = project["unityproyect"]?.Value<string>("objeto"),
+                            Habitacion = project["unityproyect"]?.Value<string>("habitacion")
+                        }
                     });
                 }
 
@@ -99,6 +109,42 @@ public class ApiManager : MonoBehaviour
                 ProjectData.Designer = projectsArray[0].Value<string>("diseñador");
                 
                 Debug.Log("API data obtained: " + jsonResponse);
+            }
+        }
+    }
+
+    //POST the scene in unityProject
+    public IEnumerator PostSceneData()
+    {
+        saverManager.SaveCurrentSceneToJson();
+
+        var apiRequestData = new
+        {
+            id = ProjectData.Id,
+            habitacion = ProjectData.CurrentHabitacionJson,
+            objeto = ProjectData.CurrentObjetoJson
+        };
+
+        string apiRequestJson = JsonConvert.SerializeObject(apiRequestData);
+        Debug.Log("Request JSON: " + apiRequestJson);  // Imprimir el JSON para verificarlo
+
+
+        using (UnityWebRequest request = new UnityWebRequest(unityproyectUrl, "POST"))
+        {
+            byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(apiRequestJson);
+            request.uploadHandler = new UploadHandlerRaw(bodyRaw);
+            request.downloadHandler = new DownloadHandlerBuffer();
+            request.SetRequestHeader("Content-Type", "application/json");
+
+            yield return request.SendWebRequest();
+
+            if (request.result != UnityWebRequest.Result.Success)
+            {
+                Debug.LogError("Error al guardar la escena: " + request.error);
+            }
+            else
+            {
+                Debug.Log("Escena guardada correctamente en el servidor.");
             }
         }
     }
